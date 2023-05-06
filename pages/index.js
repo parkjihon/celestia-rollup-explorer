@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 import { Table } from "@mantine/core";
-import { SimpleGrid, Text, Divider } from "@mantine/core";
+import { SimpleGrid, Text, Divider, Transition } from "@mantine/core";
 import CoreInfo from "../components/coreInfo";
 import CoreTOP10TXed from "../components/coreTOP10TXed";
 import CoreTOPHeight from "../components/coreTOPHeight";
@@ -15,6 +15,7 @@ import Caver from "caver-js";
 const Main = () => {
   const [coreInfo, setCoreInfo] = useState(null);
   const [coreSummary, setCoreSummary] = useState(null);
+  const [rpcBlockResult, setRpcBlockResult] = useState(null);
   
   const [ranking, setRanking] = useState(null);
   const [topUsers, setTopUsers] = useState(null);
@@ -31,16 +32,12 @@ const Main = () => {
       } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/explorer/core/summary`);
       setCoreSummary(coreSummary);
 
-      // const {
-      //   data: { data: ranking },
-      // } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/main/trades?sort=price-high&status=completed`);
-      // setRanking(ranking);
-
-      // const {
-      //   data: { data: topUsers },
-      // } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/main/topUser`);
-      // // console.log(topUsers);
-      // setTopUsers(topUsers);
+      const {
+        data: rpcBlockResult,
+      } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_CORE_RPC_URL}/block`);
+      setRpcBlockResult(rpcBlockResult);
+      console.log(rpcBlockResult);
+      
     } catch (e) {
       console.log(e);
     }
@@ -60,7 +57,8 @@ const Main = () => {
           { maxWidth: 840, cols: 1, spacing: "sm" },
         ]}
       >
-      <CoreInfo data={coreInfo} />
+        
+      <CoreInfo data={coreInfo} rpc={rpcBlockResult}/>
       </SimpleGrid>
       <SimpleGrid
         style={{ padding: "10px 80px" }}

@@ -54,7 +54,7 @@ const Collections = () => {
           { maxWidth: 850, cols: 1, spacing: "sm" },
         ]}
       >
-        <Table highlightOnHover withBorder>
+        <Table withBorder>
           <thead>
             <tr>
               <th>Block Hash</th>
