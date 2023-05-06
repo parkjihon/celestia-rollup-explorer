@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 import { Table } from "@mantine/core";
 import { SimpleGrid, Text, Divider } from "@mantine/core";
-import RankingCard from "../components/rankingCard";
 import CoreInfo from "../components/coreInfo";
 import CoreTOP10TXed from "../components/coreTOP10TXed";
 import CoreTOPHeight from "../components/coreTOPHeight";
