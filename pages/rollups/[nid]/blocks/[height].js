@@ -54,7 +54,7 @@ const Collections = () => {
 
   return (
     <div>
-        <Text style={{ color: "#666", fontSize: "38px", margin: "0px 0 20px 40px", fontWeight: "bold" }} align="left">
+        <Text style={{ color: "#444", fontSize: "38px", margin: "0px 0 20px 40px", fontWeight: "bold" }} align="left">
         Blob Details
         </Text>
         <SimpleGrid
@@ -86,7 +86,7 @@ const Collections = () => {
         </SimpleGrid>
 
         <div style={{ margin: "0px 0px 100px 0px"}}>
-        <Text style={{ color: "#666", fontSize: "20px", margin: "0px 0 20px 40px", fontWeight: "bold" }} align="left">
+        <Text style={{ color: "#444", fontSize: "20px", margin: "0px 0 20px 40px", fontWeight: "bold" }} align="left">
           Transactions
         </Text>
         <SimpleGrid
@@ -109,9 +109,6 @@ const Collections = () => {
             </thead>
             <tbody>{rowsTX}</tbody>
           </Table>
-          {/* {collections?.map((collection) => (
-            <CollectionCard collection={collection} key={collection.id} />
-          ))} */}
         </SimpleGrid>
       </div>
     </div>

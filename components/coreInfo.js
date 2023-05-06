@@ -10,7 +10,7 @@ const CoreInfo = ({ data }) => {
   return (
     <>
       <div style={{ margin: "0px 0px 20px 0px"}}>
-        <Text style={{ color: "#666", fontSize: "24px", margin: "0px 0 20px 0px", fontWeight: "bold" }} align="left">
+        <Text style={{ color: "#444", fontSize: "24px", margin: "0px 0 20px 0px", fontWeight: "bold" }} align="left">
           Summary
         </Text>
         <SimpleGrid
@@ -22,7 +22,7 @@ const CoreInfo = ({ data }) => {
             { maxWidth: 850, cols: 1, spacing: "sm" },
           ]}
         >
-        <Table striped withBorder>
+        <Table withBorder>
           <tbody>
             <tr><td width="20%">Total Chains #</td><td><b>{data?.cntNIDs}</b></td></tr>  
             <tr><td width="20%">Total Blobs #</td><td><b>{data?.cntBlobs}</b></td></tr>  

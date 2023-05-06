@@ -53,7 +53,14 @@ const Layout = ({ children }) => {
 
   return (
     <AppShell
-      style={{ paddingRight: "calc(0px + 16px)" }}
+      style={{ 
+        paddingRight: "calc(0px + 16px)",
+        backgroundImage: `url('https://celestia.org/static/header-bg-861e0242f0c2149da928dd01d1c3a486.png')`,
+        backgroundRepeat: 'no-repeat',
+        margin: "-100px 0px 0px 0px",
+        padding: "130px 0px 0px 0px",
+      }}
+      // https://celestia.org/static/header-bg-861e0242f0c2149da928dd01d1c3a486.png
       // navbarOffsetBreakpoint controls when navbar should no longer be offset with padding-left
       navbarOffsetBreakpoint="sm"
       // fixed prop on AppShell will be automatically added to Header and Navbar
@@ -61,7 +68,9 @@ const Layout = ({ children }) => {
       navbar={
         <MediaQuery largerThan="sm" styles={{ display: "none" }}>
           <Navbar
-            style={{ marginTop: "70px" }}
+            style={{ 
+              marginTop: "70px",
+            }}
             padding="md"
             // Breakpoint at which navbar will be hidden if hidden prop is true
             hiddenBreakpoint="sm"

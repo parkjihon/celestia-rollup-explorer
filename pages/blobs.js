@@ -1,6 +1,5 @@
 import { Table } from "@mantine/core";
 import { SimpleGrid, Text, Divider } from "@mantine/core";
-import CollectionCard from "../components/CollectionCard";
 import { useEffect } from "react";
 import axios from "axios";
 import { useStore } from "../utils/store";
@@ -42,7 +41,7 @@ const Collections = () => {
 
   return (
     <div>
-      <Text style={{ color: "#666", fontSize: "38px", margin: "0px 0 20px 40px", fontWeight: "bold" }} align="left">
+      <Text style={{ color: "#444", fontSize: "38px", margin: "0px 0 20px 40px", fontWeight: "bold" }} align="left">
         Blobs
       </Text>
       <SimpleGrid
@@ -69,9 +68,6 @@ const Collections = () => {
           </thead>
           <tbody>{rows}</tbody>
         </Table>
-        {/* {collections?.map((collection) => (
-          <CollectionCard collection={collection} key={collection.id} />
-        ))} */}
       </SimpleGrid>
       <Divider style={{ margin: "60px 0 60px 0" }} />
     </div>

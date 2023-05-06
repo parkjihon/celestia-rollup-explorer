@@ -6029,7 +6029,7 @@ export const aether = {
       tokenURI:
         "https://lh3.googleusercontent.com/LnuttYZiv8ZhcVY7jwSncJoiVHhUijpxNSCPZoaxWJ3nGv7dFt0zHNKH9Jl6NIUeHCAaCE28hvN8H--yVtXqrmBTeqYtrofe2IFWkQ",
       name: "Aether 111",
-      description: "Property #111 (14, 6) is a Building located in District 2.",
+      description: "Property #444 (14, 6) is a Building located in District 2.",
       traits: [
         {
           trait_type: "Type",

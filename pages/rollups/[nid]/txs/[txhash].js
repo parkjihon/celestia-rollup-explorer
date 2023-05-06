@@ -74,7 +74,7 @@ const Block = () => {
 
   return (
     <div>
-        <Text style={{ color: "#666", fontSize: "38px", margin: "0px 0 20px 40px", fontWeight: "bold" }} align="left">
+        <Text style={{ color: "#444", fontSize: "38px", margin: "0px 0 20px 40px", fontWeight: "bold" }} align="left">
         Transaction Details
         </Text>
         <SimpleGrid
